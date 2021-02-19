@@ -1,0 +1,25 @@
+Model: "sequential_2"
+_________________________________________________________________
+Layer (type)                 Output Shape              Param #   
+=================================================================
+dense_8 (Dense)              (None, 100)               1050100   
+_________________________________________________________________
+dense_9 (Dense)              (None, 100)               10100     
+_________________________________________________________________
+dense_10 (Dense)             (None, 100)               10100     
+_________________________________________________________________
+dense_11 (Dense)             (None, 11)                1111      
+=================================================================
+Total params: 1,071,411
+Trainable params: 1,071,411
+Non-trainable params: 0
+_________________________________________________________________
+Fold 1 has an error rate of 28.39
+Fold 2 has an error rate of 27.58
+Fold 3 has an error rate of 24.13
+Fold 4 has an error rate of 33.67
+Fold 5 has an error rate of 28.25
+Error rate mean: 28.403999999999996
+Error rate standard deviation: 3.0561649170160967
+Error rate for fold 3 on TIDIGIT test data: 25.3
+
