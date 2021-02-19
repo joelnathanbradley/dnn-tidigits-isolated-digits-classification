@@ -4,24 +4,18 @@ from scipy.signal import get_window
 # Code by Joel Bradley
 class DFTStream:
     '''
-    DFTStream - Transform a frame stream to various forms of spectra
+    DFTStream - Transform a frame stream to power spectrum
     '''
 
 
-    def __init__(self, frame_stream, specfmt="dB"):
+    def __init__(self, frame_stream):
         '''
-        DFTStream(frame_stream, specfmt)        
+        DFTStream(frame_stream)
         Create a stream of discrete Fourier transform (DFT) frames using the
         specified sample frame stream. Only bins up to the Nyquist rate are
-        returned except wehn specfmt == "complex":
-        
-        specfmt - DFT output:  
-            "complex" - return complex DFT results
-             "dB" [default] - return power spectrum 20log10(magnitude)
-             "mag^2" - magnitude squared spectrum
+        returned
         '''
 
-        # Note, you can implement only the default specfmt if you choose
         self.frame_stream = frame_stream
         self.frame_iter = iter(frame_stream)
          
